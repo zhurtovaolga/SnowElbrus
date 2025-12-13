@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, "Segoe UI", sans-serif;
+            background: #f6f9fc;
+            color: #333;
+        }
+
+        .documents {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 16px;
+        }
+
+        .documents__title {
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+
+        .documents__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .document-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .document-card__title {
+            padding: 16px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            background: #00cccc;
+            color: #fff;
+        }
+
+        .document-card iframe,
+        .document-card img {
+            width: 100%;
+            height: 450px;
+            border: none;
+            object-fit: contain;
+            background: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+            .documents {
+                padding: 50px 12px;
+            }
+
+            .document-card iframe,
+            .document-card img {
+                height: 360px;
+            }
+        }
+    </style>
+
+    <section class="documents">
+        <h1 class="documents__title">Документы и сертификаты</h1>
+
+        <div class="documents__grid">
+
+            <div class="document-card">
+                <div class="document-card__title">Диплом инструктора</div>
+                <img src="/documents/Diploma (Olga Zhurtova).png" alt="Diploma"></img>
+            </div>
+
+            <div class="document-card">
+                <div class="document-card__title">Удостоверение инструктора 1</div>
+                <img src="/documents/Instructor_license(1).jpg" alt="Instructor license">
+            </div>
+
+            <div class="document-card">
+                <div class="document-card__title">Удостоверение инструктора 2</div>
+                <img src="/documents/Instructor_license(2).jpg" alt="Instructor license">
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
