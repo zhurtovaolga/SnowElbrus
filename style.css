@@ -509,7 +509,10 @@ section {
 }
 
 .prices {
+    padding: 40px 20px;
     margin-bottom: 50px;
+    background: linear-gradient(180deg, #f7fbfd, #ffffff);
+    border-radius: 16px;
 }
 
 .prices__cards {
@@ -520,6 +523,7 @@ section {
 }
 
 .prices__card {
+    position: relative;
     min-width: 250px;
     background: #ffffff;
     border-radius: 16px;
@@ -528,12 +532,31 @@ section {
     border: 1px solid rgba(0, 160, 160, 0.12);
 }
 
-.prices__season-title {
+.prices-card--low::before,
+.prices-card--high::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 22px 22px 0 0;
+}
+
+.prices-card--low::before {
+    background: linear-gradient(90deg, #4fd1c5, #38b2ac);
+}
+
+.prices-card--high::before {
+    background: linear-gradient(90deg, #f6ad55, #ed8936);
+}
+
+.prices__card-title {
     text-align: center;
     font-size: 1.9rem;
     margin-bottom: 25px;
     font-weight: 600;
-    color: #009999;
+    color: #1f2933;
 }
 
 .prices__group {
@@ -544,7 +567,7 @@ section {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 10px;
-    color: #333;
+    color: #009999;
 }
 
 .prices__group ul {
@@ -555,19 +578,23 @@ section {
 .prices__group li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
     font-size: 1.25rem;
-    padding: 8px 0;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
-    color: #444;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .prices__group span {
-    font-weight: 500;
-    color: #000;
+    color: #4b5563;
+}
+
+.prices__group strong {
+    font-weight: 600;
+    color: #111827;
 }
 
 .prices__note {
-    margin-top: 35px;
+    margin-top: 50px;
     text-align: center;
     font-size: 1.25rem;
     color: #333;
@@ -655,6 +682,10 @@ section {
 }
 
 @media (max-width: 600px) {
+    .info-section {
+        padding-top: 30px;
+    }
+
     .info-card {
         padding: 25px 22px;
     }
@@ -665,6 +696,10 @@ section {
 
     .info-title {
         font-size: 1.8rem;
+    }
+
+    .info-extra {
+        margin-bottom: 50px;
     }
 }
 
