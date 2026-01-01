@@ -67,7 +67,7 @@ section {
 .header__inner {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
 
 .logo a {
@@ -81,19 +81,6 @@ section {
 .nav {
     display: flex;
     gap: 35px;
-}
-
-.nav.active {
-    position: fixed;
-    top: -60px;
-    right: 0;
-    flex-direction: column;
-    background-color: #2d4052;
-    margin-top: 60px;
-    padding: 60px 10px 20px 10px;
-    border: 1px solid gray;
-    border-radius: 12px 0 0 12px;
-    transition: 0.2s ease;
 }
 
 .nav__link {
@@ -181,13 +168,17 @@ section {
 }
 
 @media (max-width: 768px) {
+    .header {
+        background-color: #2d4052;
+    }
+
     .nav {
         position: fixed;
-        top: -60px;
+        top: 68.8px;
         right: 0;
         flex-direction: column;
         background-color: #2d4052;
-        padding: 60px 10px 20px 10px;
+        padding: 20px 10px 20px 10px;
         border: 1px solid gray;
         border-radius: 12px 0 0 12px;
         transform: translateX(100%);

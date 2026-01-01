@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Allow: /
+
+Sitemap: https://snowelbrus.ru/sitemap.xml
