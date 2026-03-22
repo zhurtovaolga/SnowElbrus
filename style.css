@@ -732,6 +732,35 @@ section {
     box-shadow: 0 4px 8px rgba(0, 150, 150, 0.2);
 }
 
+.registration__contact {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.registration__contact a {
+    display: inline-block;
+    padding: 12px 26px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #009999;
+    text-decoration: none;
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.registration__contact a:hover {
+    background-color: #00cccc;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 150, 150, 0.25);
+}
+
+.registration__contact a:active {
+    transform: scale(0.97);
+}
+
 @media (max-width: 500px) {
     .registration__links a {
         width: 100%;
