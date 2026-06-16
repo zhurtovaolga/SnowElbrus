@@ -220,7 +220,7 @@ section {
 .intro__inner {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -527,8 +527,7 @@ section {
     border: 1px solid rgba(0, 160, 160, 0.12);
 }
 
-.prices-card--low::before,
-.prices-card--high::before {
+.prices__card::before {
     content: '';
     position: absolute;
     left: 0;
@@ -538,11 +537,11 @@ section {
     border-radius: 22px 22px 0 0;
 }
 
-.prices-card--low::before {
+.prices__card:nth-child(odd):before {
     background: linear-gradient(90deg, #4fd1c5, #38b2ac);
 }
 
-.prices-card--high::before {
+.prices__card:nth-child(even):before {
     background: linear-gradient(90deg, #f6ad55, #ed8936);
 }
 

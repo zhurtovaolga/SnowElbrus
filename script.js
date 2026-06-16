@@ -17,22 +17,6 @@ navBtn.addEventListener('click', () => {
     navBtn.classList.toggle('active');
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide('.splide', {
-        type: 'loop',
-        perPage: 3,
-        focus: 'center',
-        gap: '20px',
-        autoplay: true,
-        interval: 3000,
-        breakpoints: {
-            900: { perPage: 2 },
-            600: { perPage: 1 },
-            400: { gap: '10px' }
-        }
-    }).mount();
-});
-
 docsBtn.addEventListener('click', (e) => {
     e.preventDefault();
     window.open('/documents.html', '_blank');
