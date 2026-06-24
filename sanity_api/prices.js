@@ -16,17 +16,19 @@ const pricesCardsContent = prices.seasons.map(season => `
         <h3 class="prices__card-title">${season.seasonName}</h3>
 
         ${season.groups.map(group => `
+            ${group.peopleCount && `
             <div class="prices__group">
                 <h4>${getPeopleText(group.peopleCount)}</h4>
                 <ul>
-                    <li><span>1 час:</span> <strong>${group.oneHourPrice}₽</strong></li>
-                    <li><span>2 часа:</span> <strong>${group.twoHoursPrice}₽</strong></li>
-                    <li><span>3 часа:</span> <strong>${group.threeHoursPrice}₽</strong></li>
-                </ul>
-            </div>
+                    ${group.oneHourPrice ? `<li><span>1 час:</span> <strong>${group.oneHourPrice}₽</strong></li>` : ''}
+                    ${group.twoHoursPrice ? `<li><span>2 часа:</span> <strong>${group.twoHoursPrice}₽</strong></li>` : ''}
+                    ${group.threeHoursPrice ? `<li><span>3 часа:</span> <strong>${group.threeHoursPrice}₽</strong></li>` : ''}
+                </ul >
+            </div > `
+    }
         `).join('')}
-    </div>
-`).join('');
+    </div >
+    `).join('');
 
 pricesCards.innerHTML = pricesCardsContent;
 

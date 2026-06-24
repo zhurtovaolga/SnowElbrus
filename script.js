@@ -1,6 +1,5 @@
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger');
-const docsBtn = document.querySelector('.about__diploma');
 
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
@@ -15,11 +14,6 @@ window.addEventListener('scroll', () => {
 navBtn.addEventListener('click', () => {
     nav.classList.toggle('active');
     navBtn.classList.toggle('active');
-});
-
-docsBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('/documents.html', '_blank');
 });
 
 const slider = document.querySelector('.about__slides');
@@ -38,3 +32,32 @@ btnPrev.addEventListener('click', () => {
     slider.style.transform = `translateX(-${index * 100}%)`;
 });
 
+
+/******* Modal documents *******/
+const modal = document.querySelector('.documents-modal');
+const modalOpenBtn = document.querySelector('.about__diploma');
+const modalCloseBtn = document.querySelector('.documents-modal__close');
+const overlay = document.querySelector('.documents-modal__overlay');
+
+function closeModal() {
+    modal.classList.remove('active');
+}
+
+modalOpenBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+});
+
+modalCloseBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('document-preview')) {
+        window.open(e.target.src, '_blank');
+    }
+});
